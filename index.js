@@ -21,6 +21,7 @@ app.get('/r/:subreddit', (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log("Listening on port 3000.");
+const port = process.env.PORT || 3000;//Setting port to pick up port from Heroku.
+app.listen(port, () => {
+    console.log(`Listening on port ${port}.`);
 });
